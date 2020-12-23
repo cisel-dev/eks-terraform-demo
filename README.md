@@ -13,7 +13,7 @@ You will need to clone this repo : https://github.com/cisel-dev/eks-terraform-de
 
 First we will create a new IAM user **demo-eks**  with Programmatic access and the rights to use all the stuff needed to create an EKS cluster in a brand new VPC. It is really a hard point to find exactly which rights and policy we need to give and it depend on you environment. These right below will always work. You will probably want to limit these rights, particularly with regard to administrative rights.
 
-We create a  new **EksAdminGroup** group with these two AWS Managed policy **AmazonEKSClusterPolicy**and 
+We create a  new **EksAdminGroup** group with these two AWS Managed policy **AmazonEKSClusterPolicy** and 
 **AdministratorAccess**. 
 
 Then you have to add the user to this new **EksAdminGroup** group.
