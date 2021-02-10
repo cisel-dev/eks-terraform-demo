@@ -13,6 +13,12 @@ module "eks" {
 
   vpc_id = module.vpc.vpc_id
 
+  # Block below to patch  ValidationError: gp3 is invalid #1205 
+  # https://github.com/terraform-aws-modules/terraform-aws-eks/issues/1205
+  workers_group_defaults = {  #
+  	root_volume_type = "gp2"
+  }
+   
   worker_groups = [
     {
       name                          = "worker-group-1"
